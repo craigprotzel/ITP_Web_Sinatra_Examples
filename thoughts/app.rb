@@ -24,12 +24,14 @@ DataMapper.finalize
 
 
 
-# Main route  - this is the form is shown
+# Main route
 get '/' do
   erb :welcome
 end
 
+# See all thoughts - make comments
 get '/all' do
+  #show thoguhts from recent to oldest
   @thoughts = Thought.all.reverse
   erb :all
 end
@@ -43,6 +45,7 @@ post '/comment/:id' do
   myComment.discussion = params[:discussion]
   myComment.save
 
+  #go to the '/all' route
   redirect "http://itp.nyu.edu/~chp250/sinatra/thoughts/all"
 end
 
