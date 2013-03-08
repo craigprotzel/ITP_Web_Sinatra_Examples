@@ -1,0 +1,4 @@
+PassengerEnabled on
+RackBaseURI /sinatra
+PassengerAppRoot /home/chp250/sinatra/thoughts
+RackEnv development

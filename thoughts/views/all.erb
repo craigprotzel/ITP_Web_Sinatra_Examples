@@ -1,0 +1,20 @@
+<h3> Tell me what you think about what I think:</h3>
+<ol>
+    <% for thisthought in @thoughts %>
+            
+        <li><h3><%= thisthought.body %></h3></li>
+
+        <form action="http://itp.nyu.edu/~chp250/sinatra/thoughts/comment/<%= thisthought.id %>" method="POST">
+               <p><label>What do you think?</label></p>
+               <p><textarea name="discussion"></textarea></p>
+               <input type="submit" value="Comment"/></p>
+         </form>
+            
+        <ul>
+            <% for thiscomment in thisthought.comments %>
+                <li><%= thiscomment.discussion %></li>
+            <% end %>
+        </ul>
+            
+    <% end %>
+</ol>

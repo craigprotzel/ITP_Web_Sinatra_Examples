@@ -1,0 +1,13 @@
+--- 
+- discussion: Eat something!!!
+  thought_id: 1
+  id: 1
+- discussion: " Go home!"
+  thought_id: 1
+  id: 2
+- discussion: Get some sleep!
+  thought_id: 2
+  id: 3
+- thought_id: 3
+  discussion: Me too!
+  id: 4
